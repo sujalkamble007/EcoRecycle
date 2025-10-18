@@ -1,0 +1,4 @@
+project_id = "lvwlyvkbgtzgnlkrdqji"
+
+[functions.classify-ewaste]
+verify_jwt = false
