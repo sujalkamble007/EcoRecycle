@@ -179,14 +179,25 @@ const Classify = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">{result.description}</p>
-                    <Button 
-                      onClick={schedulePickup}
-                      className="w-full bg-gradient-hero"
-                      size="lg"
-                    >
-                      Schedule Pickup
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+                    {result.category.toLowerCase() === 'other' ? (
+                      <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 text-center">
+                        <p className="text-orange-800 font-medium">
+                          Other than e-waste can't be scheduled for pickup
+                        </p>
+                        <p className="text-orange-600 text-sm mt-2">
+                          Please only submit electronic waste items for pickup scheduling.
+                        </p>
+                      </div>
+                    ) : (
+                      <Button 
+                        onClick={schedulePickup}
+                        className="w-full bg-gradient-hero"
+                        size="lg"
+                      >
+                        Schedule Pickup
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    )}
                   </div>
                 )}
               </div>
