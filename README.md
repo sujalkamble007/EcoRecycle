@@ -199,10 +199,6 @@ supabase secrets set --env-file ./supabase/.env
 	- The app now clears local state and navigates to `/auth` on sign out.
 	- If it persists, hard refresh the page to clear stale caches.
 
-- 500 in `classify‑ewaste`
-	- Set `LOVABLE_API_KEY` in function environment.
-	- Inspect function logs in Supabase dashboard.
-
 ## License
 
 MIT — see LICENSE if available, or include your licensing terms here.
